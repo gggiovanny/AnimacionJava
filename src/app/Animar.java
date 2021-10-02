@@ -32,7 +32,7 @@ public class Animar extends JPanel implements Runnable
 		posX = limiteIzquierdo;
 		posY = 380;
 		vaDerecho = true;
-		fondo = new ImageIcon("img/hombre-fondo.jpg");
+		fondo = new ImageIcon(getClass().getResource("/hombre-fondo.jpg"));
 		String[] listaImagenes = new String[25];
 		
 		int c;
@@ -52,7 +52,7 @@ public class Animar extends JPanel implements Runnable
 		imagen = new ImageIcon[listaImagenes.length];
 		
 		for (int i = 0; i<imagen.length; i++)
-			imagen[i] = new ImageIcon("img/" + listaImagenes[i]);
+			imagen[i] = new ImageIcon((getClass().getResource("/" + listaImagenes[i])));
 		
 		imagenActual = imagen[0];
 		
